@@ -1,0 +1,281 @@
+{
+  "version": "1.0",
+  "disclaimer": "Approximate values per standard serving; typical USDA-style estimates, ±15%. Not medical advice.",
+  "items": {
+    "pizza": {
+      "display_name": "Pizza",
+      "serving_description": "1 slice (107 g)",
+      "serving_grams": 107,
+      "calories_kcal": 285,
+      "protein_g": 12,
+      "carbs_g": 36,
+      "fat_g": 10,
+      "fiber_g": 2.5,
+      "source": "usda_approx"
+    },
+    "caesar_salad": {
+      "display_name": "Caesar Salad",
+      "serving_description": "1 bowl (200 g)",
+      "serving_grams": 200,
+      "calories_kcal": 310,
+      "protein_g": 8,
+      "carbs_g": 12,
+      "fat_g": 26,
+      "fiber_g": 2,
+      "source": "usda_approx"
+    },
+    "greek_salad": {
+      "display_name": "Greek Salad",
+      "serving_description": "1 bowl (250 g)",
+      "serving_grams": 250,
+      "calories_kcal": 230,
+      "protein_g": 6,
+      "carbs_g": 12,
+      "fat_g": 18,
+      "fiber_g": 3,
+      "source": "usda_approx"
+    },
+    "steak": {
+      "display_name": "Steak",
+      "serving_description": "1 sirloin, cooked (170 g)",
+      "serving_grams": 170,
+      "calories_kcal": 330,
+      "protein_g": 46,
+      "carbs_g": 0,
+      "fat_g": 15,
+      "fiber_g": 0,
+      "source": "usda_approx"
+    },
+    "chicken_curry": {
+      "display_name": "Chicken Curry",
+      "serving_description": "1 cup (250 g)",
+      "serving_grams": 250,
+      "calories_kcal": 330,
+      "protein_g": 24,
+      "carbs_g": 12,
+      "fat_g": 20,
+      "fiber_g": 3,
+      "source": "usda_approx"
+    },
+    "hamburger": {
+      "display_name": "Hamburger",
+      "serving_description": "1 burger (220 g)",
+      "serving_grams": 220,
+      "calories_kcal": 540,
+      "protein_g": 28,
+      "carbs_g": 42,
+      "fat_g": 28,
+      "fiber_g": 2,
+      "source": "usda_approx"
+    },
+    "french_fries": {
+      "display_name": "French Fries",
+      "serving_description": "1 medium (117 g)",
+      "serving_grams": 117,
+      "calories_kcal": 365,
+      "protein_g": 4,
+      "carbs_g": 48,
+      "fat_g": 17,
+      "fiber_g": 4,
+      "source": "usda_approx"
+    },
+    "sushi": {
+      "display_name": "Sushi",
+      "serving_description": "6 pieces (180 g)",
+      "serving_grams": 180,
+      "calories_kcal": 260,
+      "protein_g": 9,
+      "carbs_g": 48,
+      "fat_g": 4,
+      "fiber_g": 2,
+      "source": "usda_approx"
+    },
+    "ramen": {
+      "display_name": "Ramen",
+      "serving_description": "1 bowl (450 g)",
+      "serving_grams": 450,
+      "calories_kcal": 450,
+      "protein_g": 18,
+      "carbs_g": 60,
+      "fat_g": 16,
+      "fiber_g": 3,
+      "source": "usda_approx"
+    },
+    "spaghetti_bolognese": {
+      "display_name": "Spaghetti Bolognese",
+      "serving_description": "1 plate (350 g)",
+      "serving_grams": 350,
+      "calories_kcal": 570,
+      "protein_g": 28,
+      "carbs_g": 70,
+      "fat_g": 20,
+      "fiber_g": 6,
+      "source": "usda_approx"
+    },
+    "tacos": {
+      "display_name": "Tacos",
+      "serving_description": "2 tacos (170 g)",
+      "serving_grams": 170,
+      "calories_kcal": 340,
+      "protein_g": 16,
+      "carbs_g": 28,
+      "fat_g": 18,
+      "fiber_g": 4,
+      "source": "usda_approx"
+    },
+    "fried_rice": {
+      "display_name": "Fried Rice",
+      "serving_description": "1 cup (200 g)",
+      "serving_grams": 200,
+      "calories_kcal": 330,
+      "protein_g": 8,
+      "carbs_g": 50,
+      "fat_g": 11,
+      "fiber_g": 2,
+      "source": "usda_approx"
+    },
+    "pancakes": {
+      "display_name": "Pancakes",
+      "serving_description": "3 pancakes (150 g)",
+      "serving_grams": 150,
+      "calories_kcal": 330,
+      "protein_g": 9,
+      "carbs_g": 50,
+      "fat_g": 11,
+      "fiber_g": 2,
+      "source": "usda_approx"
+    },
+    "waffles": {
+      "display_name": "Waffles",
+      "serving_description": "2 waffles (150 g)",
+      "serving_grams": 150,
+      "calories_kcal": 430,
+      "protein_g": 10,
+      "carbs_g": 54,
+      "fat_g": 20,
+      "fiber_g": 2,
+      "source": "usda_approx"
+    },
+    "ice_cream": {
+      "display_name": "Ice Cream",
+      "serving_description": "1 cup (132 g)",
+      "serving_grams": 132,
+      "calories_kcal": 270,
+      "protein_g": 5,
+      "carbs_g": 31,
+      "fat_g": 14,
+      "fiber_g": 1,
+      "source": "usda_approx"
+    },
+    "chocolate_cake": {
+      "display_name": "Chocolate Cake",
+      "serving_description": "1 slice (100 g)",
+      "serving_grams": 100,
+      "calories_kcal": 380,
+      "protein_g": 5,
+      "carbs_g": 50,
+      "fat_g": 18,
+      "fiber_g": 3,
+      "source": "usda_approx"
+    },
+    "omelette": {
+      "display_name": "Omelette",
+      "serving_description": "3-egg (180 g)",
+      "serving_grams": 180,
+      "calories_kcal": 300,
+      "protein_g": 20,
+      "carbs_g": 3,
+      "fat_g": 23,
+      "fiber_g": 0,
+      "source": "usda_approx"
+    },
+    "guacamole": {
+      "display_name": "Guacamole",
+      "serving_description": "½ cup (120 g)",
+      "serving_grams": 120,
+      "calories_kcal": 200,
+      "protein_g": 2,
+      "carbs_g": 10,
+      "fat_g": 17,
+      "fiber_g": 7,
+      "source": "usda_approx"
+    },
+    "hot_dog": {
+      "display_name": "Hot Dog",
+      "serving_description": "1 with bun (150 g)",
+      "serving_grams": 150,
+      "calories_kcal": 300,
+      "protein_g": 11,
+      "carbs_g": 24,
+      "fat_g": 18,
+      "fiber_g": 1,
+      "source": "usda_approx"
+    },
+    "lasagna": {
+      "display_name": "Lasagna",
+      "serving_description": "1 piece (300 g)",
+      "serving_grams": 300,
+      "calories_kcal": 490,
+      "protein_g": 28,
+      "carbs_g": 45,
+      "fat_g": 22,
+      "fiber_g": 4,
+      "source": "usda_approx"
+    },
+    "samosa": {
+      "display_name": "Samosa",
+      "serving_description": "2 pieces (120 g)",
+      "serving_grams": 120,
+      "calories_kcal": 300,
+      "protein_g": 5,
+      "carbs_g": 32,
+      "fat_g": 17,
+      "fiber_g": 3,
+      "source": "usda_approx"
+    },
+    "hummus": {
+      "display_name": "Hummus",
+      "serving_description": "½ cup (120 g)",
+      "serving_grams": 120,
+      "calories_kcal": 210,
+      "protein_g": 6,
+      "carbs_g": 17,
+      "fat_g": 13,
+      "fiber_g": 6,
+      "source": "usda_approx"
+    },
+    "pad_thai": {
+      "display_name": "Pad Thai",
+      "serving_description": "1 plate (300 g)",
+      "serving_grams": 300,
+      "calories_kcal": 560,
+      "protein_g": 20,
+      "carbs_g": 70,
+      "fat_g": 22,
+      "fiber_g": 4,
+      "source": "usda_approx"
+    },
+    "donuts": {
+      "display_name": "Donuts",
+      "serving_description": "1 glazed (60 g)",
+      "serving_grams": 60,
+      "calories_kcal": 260,
+      "protein_g": 3,
+      "carbs_g": 30,
+      "fat_g": 14,
+      "fiber_g": 1,
+      "source": "usda_approx"
+    },
+    "grilled_salmon": {
+      "display_name": "Grilled Salmon",
+      "serving_description": "1 fillet (150 g)",
+      "serving_grams": 150,
+      "calories_kcal": 310,
+      "protein_g": 34,
+      "carbs_g": 0,
+      "fat_g": 19,
+      "fiber_g": 0,
+      "source": "usda_approx"
+    }
+  }
+}

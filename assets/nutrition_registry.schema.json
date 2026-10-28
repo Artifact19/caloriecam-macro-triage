@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Nutrition registry",
+  "type": "object",
+  "required": ["version", "disclaimer", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "type": "string" },
+    "disclaimer": { "type": "string", "minLength": 1 },
+    "items": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": { "pattern": "^[a-z0-9]+(_[a-z0-9]+)*$" },
+      "additionalProperties": { "$ref": "#/$defs/item" }
+    }
+  },
+  "$defs": {
+    "item": {
+      "type": "object",
+      "required": [
+        "display_name",
+        "serving_description",
+        "serving_grams",
+        "calories_kcal",
+        "protein_g",
+        "carbs_g",
+        "fat_g",
+        "fiber_g",
+        "source"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "display_name": { "type": "string", "minLength": 1 },
+        "serving_description": { "type": "string", "minLength": 1 },
+        "serving_grams": { "type": "number", "exclusiveMinimum": 0 },
+        "calories_kcal": { "type": "number", "minimum": 0 },
+        "protein_g": { "type": "number", "minimum": 0 },
+        "carbs_g": { "type": "number", "minimum": 0 },
+        "fat_g": { "type": "number", "minimum": 0 },
+        "fiber_g": { "type": "number", "minimum": 0 },
+        "source": { "type": "string", "enum": ["usda_approx", "usda_fdc_live"] }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,20 @@
+data/raw/
+models/*.pt
+models/*.onnx
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.env
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+frontend/dist/
+*.log
+*.vsix
+# keep metrics + placeholder tracked
+!models/.gitkeep
+!models/metrics.json
+!models/benchmark.json
+

@@ -1,0 +1,53 @@
+{
+  "pytorch": {
+    "mean_ms": 23.33,
+    "p50_ms": 22.65,
+    "p95_ms": 29.04,
+    "p99_ms": 31.21,
+    "throughput_ips": 42.9,
+    "size_mb": 16.34,
+    "top1": 1.0,
+    "macro_f1": 1.0
+  },
+  "onnx_fp32": {
+    "mean_ms": 4.12,
+    "p50_ms": 3.89,
+    "p95_ms": 5.49,
+    "p99_ms": 6.57,
+    "throughput_ips": 243.0,
+    "best_threads": 12,
+    "size_mb": 16.14,
+    "top1": 1.0,
+    "macro_f1": 1.0
+  },
+  "onnx_int8_dynamic": {
+    "mean_ms": 22.16,
+    "p50_ms": 22.09,
+    "p95_ms": 23.81,
+    "p99_ms": 24.16,
+    "throughput_ips": 45.1,
+    "best_threads": 4,
+    "size_mb": 4.25,
+    "top1": 0.4688,
+    "macro_f1": 0.2909
+  },
+  "onnx_int8_static": {
+    "mean_ms": 3.67,
+    "p50_ms": 3.63,
+    "p95_ms": 4.32,
+    "p99_ms": 4.56,
+    "throughput_ips": 272.3,
+    "best_threads": 4,
+    "size_mb": 4.5,
+    "top1": 0.9688,
+    "macro_f1": 0.8552
+  },
+  "default_engine": "onnx_fp32",
+  "system_info": {
+    "cpu": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cores": 12,
+    "os": "Windows 11",
+    "onnxruntime_version": "1.20.1",
+    "torch_version": "2.5.1+cpu"
+  }
+}

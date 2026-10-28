@@ -1,0 +1,127 @@
+{
+  "pizza": {
+    "food101_idx": 93,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "caesar_salad": {
+    "food101_idx": 0,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "greek_salad": {
+    "food101_idx": 82,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "steak": {
+    "food101_idx": 97,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "chicken_curry": {
+    "food101_idx": 1,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "hamburger": {
+    "food101_idx": 85,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "french_fries": {
+    "food101_idx": 80,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "sushi": {
+    "food101_idx": 98,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "ramen": {
+    "food101_idx": 94,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "spaghetti_bolognese": {
+    "food101_idx": 96,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "tacos": {
+    "food101_idx": 99,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "fried_rice": {
+    "food101_idx": 81,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "pancakes": {
+    "food101_idx": 92,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "waffles": {
+    "food101_idx": 100,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "ice_cream": {
+    "food101_idx": 88,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "chocolate_cake": {
+    "food101_idx": 2,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "omelette": {
+    "food101_idx": 90,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "guacamole": {
+    "food101_idx": 84,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "hot_dog": {
+    "food101_idx": 86,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "lasagna": {
+    "food101_idx": 89,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "samosa": {
+    "food101_idx": 95,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "hummus": {
+    "food101_idx": 87,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "pad_thai": {
+    "food101_idx": 91,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "donuts": {
+    "food101_idx": 3,
+    "train_count": 20,
+    "test_count": 10
+  },
+  "grilled_salmon": {
+    "food101_idx": 83,
+    "train_count": 20,
+    "test_count": 10
+  }
+}

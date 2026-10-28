@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --c-page: #fcefe6;
+  --c-surface: #ffffff;
+  --c-sunken: #f1e3d8;
+  --c-ink: #141414;
+  --c-muted: #5c544d;
+  --c-panel: #fad1cd;
+
+  --color-coral: #f25f5c;
+  --color-grape: #a78bfa;
+  --color-teal: #3ccbb9;
+  --color-sun: #ffe066;
+  --color-tangerine: #f4a261;
+
+  --shadow-hard: 4px 4px 0 0 var(--c-ink);
+  --border-thick: 2px solid var(--c-ink);
+}
+
+.dark {
+  --c-page: #141414;
+  --c-surface: #1f1d1b;
+  --c-sunken: #2b2825;
+  --c-ink: #fcefe6;
+  --c-muted: #c9bcb0;
+  --c-panel: #3a2321;
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-page font-sans text-ink antialiased;
+    min-width: 320px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-bold tracking-tight;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-grape);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  /* Bordered, hard-shadowed surface */
+  .brutal-card {
+    @apply rounded-2xl border-2 border-ink bg-surface text-ink shadow-brutal;
+  }
+
+  /* Pressable button: shifts toward its shadow on hover/active while the shadow shrinks */
+  .btn-brutal {
+    @apply inline-flex min-h-[44px] select-none items-center justify-center gap-2 rounded-xl border-2 border-ink px-4 py-2 font-display text-sm font-bold text-night shadow-brutal transition-all duration-100 ease-out;
+    @apply hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-sm;
+    @apply active:translate-x-[4px] active:translate-y-[4px] active:shadow-brutal-none;
+    @apply disabled:pointer-events-none disabled:opacity-50;
+    @apply motion-reduce:transition-none motion-reduce:hover:translate-x-0 motion-reduce:hover:translate-y-0 motion-reduce:active:translate-x-0 motion-reduce:active:translate-y-0;
+  }
+
+  /* Pill tag badge */
+  .tag-pill {
+    @apply inline-flex items-center gap-1.5 rounded-full border-2 border-ink px-3 py-0.5 text-xs font-bold text-night shadow-brutal-sm;
+  }
+
+  .input-brutal {
+    @apply min-h-[44px] rounded-xl border-2 border-ink bg-surface px-3 py-2 text-ink shadow-brutal-sm;
+  }
+
+  /* Skeleton shimmer block */
+  .skeleton {
+    @apply rounded-xl border-2 border-ink;
+    background-image: linear-gradient(
+      90deg,
+      var(--c-sunken) 0%,
+      var(--c-surface) 50%,
+      var(--c-sunken) 100%
+    );
+    background-size: 200% 100%;
+    @apply animate-shimmer motion-reduce:animate-none;
+  }
+
+  /* Bordered progress bar with striped fill */
+  .progress-track {
+    @apply h-4 w-full overflow-hidden rounded-full border-2 border-ink bg-surface;
+  }
+  .progress-stripes {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(20, 20, 20, 0.18) 0,
+      rgba(20, 20, 20, 0.18) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+    background-size: 40px 40px;
+  }
+
+  /* Range slider styled like a brutalist control */
+  input[type='range'].range-brutal {
+    @apply h-11 w-full cursor-pointer appearance-none bg-transparent;
+  }
+  input[type='range'].range-brutal::-webkit-slider-runnable-track {
+    height: 14px;
+    border: 2px solid var(--c-ink);
+    border-radius: 999px;
+    background: var(--c-surface);
+  }
+  input[type='range'].range-brutal::-moz-range-track {
+    height: 10px;
+    border: 2px solid var(--c-ink);
+    border-radius: 999px;
+    background: var(--c-surface);
+  }
+  input[type='range'].range-brutal::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 28px;
+    width: 28px;
+    margin-top: -9px;
+    border-radius: 8px;
+    border: 2px solid var(--c-ink);
+    background: var(--color-coral);
+    box-shadow: 2px 2px 0 0 var(--c-ink);
+  }
+  input[type='range'].range-brutal::-moz-range-thumb {
+    height: 24px;
+    width: 24px;
+    border-radius: 8px;
+    border: 2px solid var(--c-ink);
+    background: var(--color-coral);
+    box-shadow: 2px 2px 0 0 var(--c-ink);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
