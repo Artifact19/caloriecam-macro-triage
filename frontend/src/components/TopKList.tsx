@@ -14,7 +14,7 @@ export function TopKList({ items, activeLabel }: TopKListProps) {
   const top = items.slice(0, 3);
   return (
     <div className="brutal-card p-4 sm:p-5">
-      <h2 className="mb-3 font-display text-lg font-bold">Top 3 predictions</h2>
+      <h2 className="mb-3 font-display text-lg font-bold">Similar Dish Matches</h2>
       <ol className="space-y-3">
         {top.map((item, i) => {
           const pct = Math.min(100, Math.max(0, item.confidence * 100));

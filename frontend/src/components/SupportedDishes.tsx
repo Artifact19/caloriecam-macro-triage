@@ -58,7 +58,7 @@ export function SupportedDishes() {
               25 Supported Dishes
             </h3>
             <p className="text-xs text-muted sm:text-sm">
-              The model is trained to recognize these 25 specific meal categories.
+              CalorieCAM is tuned to recognize these 25 popular meal categories.
             </p>
           </div>
         </div>
@@ -106,11 +106,11 @@ export function SupportedDishes() {
             ))}
           </div>
           <p className="rounded-lg border-2 border-ink bg-panel p-2.5 text-xs font-medium text-night">
-            <strong>Unsure about a dish?</strong> Uploading meals outside these 25 will trigger the{' '}
-            <span className="font-bold underline">Uncertain Triage</span> warning rather than guessing incorrectly.
+            <strong>Looking for another dish?</strong> If a meal outside these 25 is uploaded, CalorieCAM flags it with alternative suggestions rather than guessing blindly.
           </p>
         </div>
       )}
     </div>
   );
 }
+

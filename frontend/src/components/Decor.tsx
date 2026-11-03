@@ -9,7 +9,7 @@ interface ShapeProps {
 
 /** Decorative shapes (aria-hidden). Fill color is a Tailwind-independent CSS color. */
 
-export function StarShape({ className = '', size = 24, color = '#FFE066', style }: ShapeProps) {
+export function StarShape({ className = '', size = 24, color = '#EAB252', style }: ShapeProps) {
   return (
     <svg
       aria-hidden="true"
@@ -23,7 +23,7 @@ export function StarShape({ className = '', size = 24, color = '#FFE066', style 
       <path
         d="M12 2.5l2.8 6.2 6.7.7-5 4.6 1.4 6.6L12 17.2 6.1 20.6l1.4-6.6-5-4.6 6.7-.7z"
         fill={color}
-        stroke="#141414"
+        stroke="#1C1917"
         strokeWidth="2"
         strokeLinejoin="round"
       />
@@ -31,7 +31,7 @@ export function StarShape({ className = '', size = 24, color = '#FFE066', style 
   );
 }
 
-export function SquareShape({ className = '', size = 20, color = '#F4A261', style }: ShapeProps) {
+export function SquareShape({ className = '', size = 20, color = '#DE8E48', style }: ShapeProps) {
   return (
     <svg
       aria-hidden="true"
@@ -42,12 +42,12 @@ export function SquareShape({ className = '', size = 20, color = '#F4A261', styl
       height={size}
       viewBox="0 0 24 24"
     >
-      <rect x="3" y="3" width="18" height="18" rx="3" fill={color} stroke="#141414" strokeWidth="2.5" />
+      <rect x="3" y="3" width="18" height="18" rx="3" fill={color} stroke="#1C1917" strokeWidth="2.5" />
     </svg>
   );
 }
 
-export function DiamondShape({ className = '', size = 20, color = '#3CCBB9', style }: ShapeProps) {
+export function DiamondShape({ className = '', size = 20, color = '#869874', style }: ShapeProps) {
   return (
     <svg
       aria-hidden="true"
@@ -58,12 +58,12 @@ export function DiamondShape({ className = '', size = 20, color = '#3CCBB9', sty
       height={size}
       viewBox="0 0 24 24"
     >
-      <path d="M12 2.5L21.5 12 12 21.5 2.5 12z" fill={color} stroke="#141414" strokeWidth="2.5" strokeLinejoin="round" />
+      <path d="M12 2.5L21.5 12 12 21.5 2.5 12z" fill={color} stroke="#1C1917" strokeWidth="2.5" strokeLinejoin="round" />
     </svg>
   );
 }
 
-export function CircleShape({ className = '', size = 20, color = '#A78BFA', style }: ShapeProps) {
+export function CircleShape({ className = '', size = 20, color = '#9688B0', style }: ShapeProps) {
   return (
     <svg
       aria-hidden="true"
@@ -74,12 +74,12 @@ export function CircleShape({ className = '', size = 20, color = '#A78BFA', styl
       height={size}
       viewBox="0 0 24 24"
     >
-      <circle cx="12" cy="12" r="9" fill={color} stroke="#141414" strokeWidth="2.5" />
+      <circle cx="12" cy="12" r="9" fill={color} stroke="#1C1917" strokeWidth="2.5" />
     </svg>
   );
 }
 
-export function SparkleShape({ className = '', size = 24, color = '#141414', style }: ShapeProps) {
+export function SparkleShape({ className = '', size = 24, color = '#1C1917', style }: ShapeProps) {
   return (
     <svg
       aria-hidden="true"

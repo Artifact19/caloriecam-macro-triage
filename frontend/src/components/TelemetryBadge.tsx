@@ -1,6 +1,6 @@
 import { useId, useState } from 'react';
 import { ChevronDown, Zap } from 'lucide-react';
-import { formatEngine, formatMs } from '../lib/format';
+import { formatMs } from '../lib/format';
 import type { Latency } from '../lib/types';
 
 interface TelemetryBadgeProps {
@@ -12,15 +12,15 @@ interface TelemetryBadgeProps {
 }
 
 /** Shows only measured values returned by the server and measured in the browser. */
-export function TelemetryBadge({ latency, engine, modelVersion, roundTripMs }: TelemetryBadgeProps) {
+export function TelemetryBadge({ latency, roundTripMs }: TelemetryBadgeProps) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
 
   const parts: { key: string; label: string; ms: number | null; color: string }[] = [
-    { key: 'pre', label: 'Preprocess', ms: latency.preprocess_ms, color: '#A78BFA' },
-    { key: 'inf', label: 'Inference', ms: latency.inference_ms, color: '#3CCBB9' },
-    { key: 'gc', label: 'Grad-CAM', ms: latency.gradcam_ms, color: '#F25F5C' },
-    { key: 'post', label: 'Postprocess', ms: latency.postprocess_ms, color: '#FFE066' },
+    { key: 'pre', label: 'Image scanning', ms: latency.preprocess_ms, color: '#9688B0' },
+    { key: 'inf', label: 'Dish matching', ms: latency.inference_ms, color: '#869874' },
+    { key: 'gc', label: 'Visual focus map', ms: latency.gradcam_ms, color: '#D97762' },
+    { key: 'post', label: 'Nutrition calculation', ms: latency.postprocess_ms, color: '#EAB252' },
   ];
   const sum = parts.reduce((acc, p) => acc + (p.ms ?? 0), 0);
 
@@ -36,12 +36,12 @@ export function TelemetryBadge({ latency, engine, modelVersion, roundTripMs }: T
         <span className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1">
           <span className="flex items-center gap-2 font-display font-bold">
             <Zap size={18} strokeWidth={2.5} className="text-tangerine" aria-hidden="true" />
-            Ingest to Output:{' '}
+            Analysis Speed:{' '}
             <span className="tabular" data-testid="total-ms">
               {formatMs(latency.total_ms)}
             </span>
           </span>
-          <span className="tag-pill bg-grape">{formatEngine(engine)}</span>
+          <span className="tag-pill bg-teal">100% On-Device</span>
         </span>
         <ChevronDown
           size={20}
@@ -57,7 +57,7 @@ export function TelemetryBadge({ latency, engine, modelVersion, roundTripMs }: T
             <div
               className="flex h-5 w-full overflow-hidden rounded-full border-2 border-ink"
               role="img"
-              aria-label="Latency breakdown by stage"
+              aria-label="Processing breakdown"
             >
               {parts.map((p, i) => (
                 <div
@@ -86,25 +86,18 @@ export function TelemetryBadge({ latency, engine, modelVersion, roundTripMs }: T
               </div>
             ))}
             <dt className="border-t-2 border-dashed border-ink pt-1.5 font-medium">
-              Classification only
+              Core match speed
             </dt>
             <dd className="tabular border-t-2 border-dashed border-ink pt-1.5 text-right font-bold">
               {formatMs(latency.classification_path_ms)}
             </dd>
-            <dt className="font-medium">Server total</dt>
-            <dd className="tabular text-right font-bold">{formatMs(latency.total_ms)}</dd>
-            <dt className="font-medium">Round-trip (browser)</dt>
+            <dt className="font-medium">Total device response time</dt>
             <dd className="tabular text-right font-bold" data-testid="roundtrip-ms">
               {formatMs(roundTripMs)}
             </dd>
-            <dt className="font-medium">Engine</dt>
-            <dd className="text-right font-bold">{formatEngine(engine)}</dd>
-            <dt className="font-medium">Model</dt>
-            <dd className="break-all text-right font-bold">{modelVersion}</dd>
           </dl>
           <p className="text-xs text-muted">
-            Server times are measured locally on the backend; round-trip is measured in your browser
-            around the request.
+            All meal analysis runs privately on your device. No photos or data are transmitted outside.
           </p>
         </div>
       )}

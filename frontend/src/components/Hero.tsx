@@ -27,14 +27,13 @@ export function Hero() {
         <span className="text-muted">Know the macros.</span>
       </h2>
       <p className="mx-auto mt-4 max-w-xl text-base font-medium text-muted sm:text-lg">
-        Drop, paste or photograph any of the 25 supported dishes. The model names it, shows what it looked at, and tells you
-        when it is not sure.
+        Drop, paste or photograph any of our 25 supported dishes. CalorieCAM identifies the meal, highlights the plate, and provides instant nutritional estimates.
       </p>
       <ul className="mt-6 flex flex-wrap items-center justify-center gap-2">
-        <li className="tag-pill bg-coral">25 Food Categories</li>
-        <li className="tag-pill bg-grape">Grad-CAM Attention</li>
-        <li className="tag-pill bg-teal">100% Local Inference</li>
-        <li className="tag-pill bg-sun">Honest Latency</li>
+        <li className="tag-pill bg-coral">25 Classic Dishes</li>
+        <li className="tag-pill bg-grape">Visual Focus Heatmap</li>
+        <li className="tag-pill bg-teal">Private &amp; On-Device</li>
+        <li className="tag-pill bg-sun">Instant Nutrition Breakdown</li>
       </ul>
     </section>
   );
@@ -43,9 +42,9 @@ export function Hero() {
 /** Right-column placeholder shown before an image is chosen. */
 export function EmptyPanel() {
   const steps = [
-    { icon: Camera, title: 'Add a photo', text: 'Upload, paste, snap, or pick a sample.', color: 'bg-sun' },
-    { icon: Gauge, title: 'Get a verdict', text: 'Dish, confidence and a triage call.', color: 'bg-teal' },
-    { icon: ClipboardPaste, title: 'Scale the macros', text: 'Adjust the portion; numbers update live.', color: 'bg-grape' },
+    { icon: Camera, title: 'Add a photo', text: 'Upload, paste, snap, or choose a sample plate.', color: 'bg-sun' },
+    { icon: Gauge, title: 'Instant recognition', text: 'Dish match, confidence score, and meal alternatives.', color: 'bg-teal' },
+    { icon: ClipboardPaste, title: 'Adjust portions', text: 'Tweak servings and see calories & macros update live.', color: 'bg-grape' },
   ];
   return (
     <section

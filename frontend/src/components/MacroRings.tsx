@@ -11,9 +11,9 @@ interface MacroRingsProps {
 }
 
 export const MACRO_COLORS = {
-  protein: '#A78BFA',
-  carbs: '#FFE066',
-  fat: '#F25F5C',
+  protein: '#9688B0',
+  carbs: '#EAB252',
+  fat: '#D97762',
 } as const;
 
 interface RingDef {

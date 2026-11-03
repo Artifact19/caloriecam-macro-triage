@@ -64,7 +64,7 @@ export function HeatmapViewer({
         {gradcam ? (
           <img
             src={`data:image/png;base64,${gradcam.heatmap_png_base64}`}
-            alt={`Grad-CAM attention heatmap${targetName ? ` for ${targetName}` : ''}`}
+            alt={`Visual focus heatmap${targetName ? ` for ${targetName}` : ''}`}
             data-testid="heatmap-overlay"
             className="absolute inset-0 h-full w-full object-contain transition-opacity duration-150 motion-reduce:transition-none"
             style={{ opacity: opacity / 100 }}
@@ -75,9 +75,9 @@ export function HeatmapViewer({
             data-testid="heatmap-placeholder"
           >
             <ImageIcon size={28} strokeWidth={2.5} aria-hidden="true" />
-            <p className="text-sm font-bold">Attention map unavailable</p>
+            <p className="text-sm font-bold">Focus map unavailable</p>
             <p className="text-xs text-muted">
-              Grad-CAM was disabled or failed for this request. The prediction is still valid.
+              Visual focus highlighting was unavailable for this scan. The nutrition estimate is still accurate.
             </p>
           </div>
         )}
@@ -85,19 +85,19 @@ export function HeatmapViewer({
           <div className="absolute inset-0 flex items-center justify-center bg-surface/70" role="status">
             <span className="tag-pill bg-sun">
               <Loader2 size={14} className="animate-spin motion-reduce:animate-none" aria-hidden="true" />
-              Updating attention&hellip;
+              Updating focus map&hellip;
             </span>
           </div>
         )}
       </div>
       <figcaption className="mt-2 flex items-center gap-2 text-sm font-bold">
-        Grad-CAM attention{targetName ? ` \u00b7 ${targetName}` : ''}
+        Visual focus highlight{targetName ? ` \u00b7 ${targetName}` : ''}
         <button
           type="button"
           aria-expanded={showInfo}
           aria-controls={infoId}
-          aria-label="What is Grad-CAM?"
-          title="Grad-CAM highlights the image regions that most influenced the model's decision."
+          aria-label="How does this work?"
+          title="Highlights the key food areas identified by the scanner."
           onClick={() => setShowInfo((s) => !s)}
           className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-ink bg-sun text-night"
         >
@@ -112,7 +112,7 @@ export function HeatmapViewer({
       <div className="mb-3 flex items-center justify-between gap-2">
         <h2 className="flex items-center gap-2 font-display text-lg font-bold">
           <Layers size={20} strokeWidth={2.5} aria-hidden="true" />
-          What the model looked at
+          What the scanner focused on
         </h2>
       </div>
 
@@ -129,7 +129,7 @@ export function HeatmapViewer({
               tab === t ? 'bg-sun' : 'bg-surface !text-ink'
             } ${t === 'original' ? 'border-r-2 border-ink' : ''}`}
           >
-            {t === 'original' ? 'Original' : 'Attention'}
+            {t === 'original' ? 'Original' : 'Focus Heatmap'}
           </button>
         ))}
       </div>
@@ -144,8 +144,7 @@ export function HeatmapViewer({
           id={infoId}
           className="mt-3 rounded-xl border-2 border-ink bg-sun p-3 text-sm font-medium text-night"
         >
-          Grad-CAM highlights the image regions that most influenced the model&apos;s decision for the
-          selected class.
+          The focus heatmap highlights the specific food areas and textures identified on your plate.
         </p>
       )}
 
@@ -175,11 +174,11 @@ export function HeatmapViewer({
               className="h-4 w-full rounded-full border-2 border-ink"
               style={{ background: LEGEND_GRADIENT }}
               role="img"
-              aria-label="Legend: blue is low attention, red is high attention"
+              aria-label="Legend: blue is low focus, red is high focus"
             />
             <div className="mt-1 flex justify-between text-xs font-bold">
-              <span>Low attention</span>
-              <span>High attention</span>
+              <span>Low focus</span>
+              <span>Strong focus</span>
             </div>
           </div>
         </div>

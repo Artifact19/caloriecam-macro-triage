@@ -45,7 +45,7 @@ export function TriageBanner({
         </span>
         <div className="min-w-0">
           <h2 className="font-display text-lg font-bold">
-            {uncertain ? 'Uncertain prediction' : 'Please double-check'}
+            {uncertain ? 'Uncertain dish match' : 'Please double-check'}
           </h2>
           <p className="text-sm font-medium">{triage.message}</p>
         </div>
@@ -91,7 +91,7 @@ export function TriageBanner({
           <span className="font-bold">{viewing.display_name}</span>
           <button type="button" className="btn-brutal ml-auto bg-surface !text-ink" onClick={onReset}>
             <ArrowLeft size={16} strokeWidth={2.5} aria-hidden="true" />
-            Back to top prediction
+            Back to best match
           </button>
         </div>
       )}

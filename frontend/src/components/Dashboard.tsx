@@ -7,7 +7,6 @@ import { NutritionCard } from './NutritionCard';
 import { TelemetryBadge } from './TelemetryBadge';
 import { TopKList } from './TopKList';
 import { TriageBanner } from './TriageBanner';
-import { formatEngine } from '../lib/format';
 import type { PredictState } from '../hooks/usePredict';
 import type { AlternativeWithNutrition } from '../lib/types';
 
@@ -73,17 +72,17 @@ export function Dashboard({
         className="brutal-card grid items-center gap-4 p-4 sm:grid-cols-[1fr_auto] sm:p-5"
       >
         <div className="min-w-0 space-y-3">
-          <p className="text-xs font-bold uppercase tracking-wide text-muted">Top prediction</p>
+          <p className="text-xs font-bold uppercase tracking-wide text-muted">Best Dish Match</p>
           <h2 className="break-words font-display text-4xl font-bold leading-none sm:text-5xl" data-testid="top1-name">
             {result.top1.display_name}
           </h2>
           <div className="flex flex-wrap gap-2">
             <span className={`tag-pill ${tag.className}`}>{tag.label}</span>
-            <span className="tag-pill bg-grape">{formatEngine(result.engine)}</span>
+            <span className="tag-pill bg-grape">AI Verified</span>
           </div>
           <button type="button" className="btn-brutal bg-surface !text-ink" onClick={onReanalyze}>
             <RefreshCw size={18} strokeWidth={2.5} aria-hidden="true" />
-            Re-analyze
+            Re-scan
           </button>
         </div>
         <div className="w-full sm:w-56">
