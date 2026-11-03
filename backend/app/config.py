@@ -30,7 +30,7 @@ class Settings(BaseSettings):
     conf_threshold_high: float = 0.70
     conf_threshold_low: float = 0.40
     max_upload_mb: float = 10
-    allowed_origins: str = "http://localhost:5173,http://127.0.0.1:5173"
+    allowed_origins: str = "*"
     usda_api_key: Optional[str] = None
     ort_intra_op_threads: int = 0
 

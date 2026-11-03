@@ -1,7 +1,8 @@
 import { ApiError, kindFromStatus, toApiError } from './errors';
 import type { Health, Nutrition, PredictOptions, PredictResponse, PredictResult } from './types';
 
-export const API_BASE = '/api';
+const envBase = (import.meta.env.VITE_API_BASE_URL as string | undefined)?.replace(/\/$/, '') ?? '';
+export const API_BASE = envBase ? `${envBase}/api` : '/api';
 
 async function readError(res: Response): Promise<ApiError> {
   let detail: string | undefined;
