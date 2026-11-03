@@ -15,9 +15,9 @@ export function confidenceBand(confidence: number): ConfidenceBand {
 }
 
 const BAND_STYLE: Record<ConfidenceBand, { color: string; label: string }> = {
-  high: { color: '#869874', label: 'High' },
-  medium: { color: '#EAB252', label: 'Medium' },
-  low: { color: '#D97762', label: 'Low' },
+  high: { color: '#8C9B7A', label: 'High' },
+  medium: { color: '#EBB058', label: 'Medium' },
+  low: { color: '#DC903C', label: 'Low' },
 };
 
 const ARC = 'M 14 62 A 46 46 0 0 1 106 62';

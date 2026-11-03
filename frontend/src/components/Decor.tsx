@@ -9,7 +9,7 @@ interface ShapeProps {
 
 /** Decorative shapes (aria-hidden). Fill color is a Tailwind-independent CSS color. */
 
-export function StarShape({ className = '', size = 24, color = '#EAB252', style }: ShapeProps) {
+export function StarShape({ className = '', size = 24, color = '#DC903C', style }: ShapeProps) {
   return (
     <svg
       aria-hidden="true"
@@ -31,7 +31,29 @@ export function StarShape({ className = '', size = 24, color = '#EAB252', style 
   );
 }
 
-export function SquareShape({ className = '', size = 20, color = '#DE8E48', style }: ShapeProps) {
+export function TriangleShape({
+  className = '',
+  size = 22,
+  color = '#8C9B7A',
+  style,
+  rotate = 0,
+}: ShapeProps & { rotate?: number }) {
+  return (
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      className={className}
+      style={{ ...style, transform: rotate ? `rotate(${rotate}deg)` : undefined }}
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+    >
+      <polygon points="12,3 22,21 2,21" fill={color} stroke="#1C1917" strokeWidth="2.5" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function SquareShape({ className = '', size = 20, color = '#ECC1B8', style }: ShapeProps) {
   return (
     <svg
       aria-hidden="true"
@@ -47,7 +69,7 @@ export function SquareShape({ className = '', size = 20, color = '#DE8E48', styl
   );
 }
 
-export function DiamondShape({ className = '', size = 20, color = '#869874', style }: ShapeProps) {
+export function DiamondShape({ className = '', size = 20, color = '#8C9B7A', style }: ShapeProps) {
   return (
     <svg
       aria-hidden="true"
@@ -63,7 +85,7 @@ export function DiamondShape({ className = '', size = 20, color = '#869874', sty
   );
 }
 
-export function CircleShape({ className = '', size = 20, color = '#9688B0', style }: ShapeProps) {
+export function CircleShape({ className = '', size = 20, color = '#EBB058', style }: ShapeProps) {
   return (
     <svg
       aria-hidden="true"

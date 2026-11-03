@@ -17,10 +17,10 @@ export function TelemetryBadge({ latency, roundTripMs }: TelemetryBadgeProps) {
   const panelId = useId();
 
   const parts: { key: string; label: string; ms: number | null; color: string }[] = [
-    { key: 'pre', label: 'Image scanning', ms: latency.preprocess_ms, color: '#9688B0' },
-    { key: 'inf', label: 'Dish matching', ms: latency.inference_ms, color: '#869874' },
-    { key: 'gc', label: 'Visual focus map', ms: latency.gradcam_ms, color: '#D97762' },
-    { key: 'post', label: 'Nutrition calculation', ms: latency.postprocess_ms, color: '#EAB252' },
+    { key: 'pre', label: 'Image scanning', ms: latency.preprocess_ms, color: '#9E8FB2' },
+    { key: 'inf', label: 'Dish matching', ms: latency.inference_ms, color: '#8C9B7A' },
+    { key: 'gc', label: 'Visual focus map', ms: latency.gradcam_ms, color: '#ECC1B8' },
+    { key: 'post', label: 'Nutrition calculation', ms: latency.postprocess_ms, color: '#DC903C' },
   ];
   const sum = parts.reduce((acc, p) => acc + (p.ms ?? 0), 0);
 

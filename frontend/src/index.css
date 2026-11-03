@@ -3,30 +3,30 @@
 @tailwind utilities;
 
 :root {
-  --c-page: #b88b80;
-  --c-surface: #f7f5f0;
-  --c-sunken: #ebe7df;
+  --c-page: #e7e6e4;
+  --c-surface: #fbf9f5;
+  --c-sunken: #dfdcd6;
   --c-ink: #1c1917;
   --c-muted: #6e6660;
-  --c-panel: #e6cfca;
+  --c-panel: #ecc1b8;
 
-  --color-coral: #d97762;
-  --color-grape: #9688b0;
-  --color-teal: #869874;
-  --color-sun: #eab252;
-  --color-tangerine: #de8e48;
+  --color-coral: #ecc1b8;
+  --color-grape: #9e8fb2;
+  --color-teal: #8c9b7a;
+  --color-sun: #ebb058;
+  --color-tangerine: #dc903c;
 
   --shadow-hard: 4px 4px 0 0 var(--c-ink);
   --border-thick: 2px solid var(--c-ink);
 }
 
 .dark {
-  --c-page: #171514;
-  --c-surface: #242120;
-  --c-sunken: #2f2c2a;
-  --c-ink: #f7f5f0;
-  --c-muted: #a69e97;
-  --c-panel: #382b28;
+  --c-page: #191817;
+  --c-surface: #252321;
+  --c-sunken: #302d2a;
+  --c-ink: #e7e6e4;
+  --c-muted: #a59e98;
+  --c-panel: #3b2c29;
   color-scheme: dark;
 }
 
@@ -62,7 +62,7 @@
 
   /* Pressable button: shifts toward its shadow on hover/active while the shadow shrinks */
   .btn-brutal {
-    @apply inline-flex min-h-[44px] select-none items-center justify-center gap-2 rounded-xl border-2 border-ink px-4 py-2 font-display text-sm font-bold text-night shadow-brutal transition-all duration-100 ease-out;
+    @apply inline-flex min-h-[44px] select-none items-center justify-center gap-2 rounded-full border-2 border-ink px-5 py-2 font-display text-sm font-bold text-night shadow-brutal transition-all duration-100 ease-out;
     @apply hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-brutal-sm;
     @apply active:translate-x-[4px] active:translate-y-[4px] active:shadow-brutal-none;
     @apply disabled:pointer-events-none disabled:opacity-50;

@@ -223,7 +223,7 @@ export function UploadZone({
         )}
         <button
           type="button"
-          className="btn-brutal bg-coral"
+          className="btn-brutal bg-tangerine"
           onClick={() => cameraRef.current?.click()}
         >
           <Camera size={18} strokeWidth={2.5} aria-hidden="true" />

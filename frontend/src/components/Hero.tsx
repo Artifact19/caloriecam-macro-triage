@@ -1,5 +1,5 @@
 import { Camera, ClipboardPaste, Gauge, ScanSearch } from 'lucide-react';
-import { CircleShape, DiamondShape, SparkleShape, SquareShape, StarShape } from './Decor';
+import { CircleShape, DiamondShape, SparkleShape, SquareShape, StarShape, TriangleShape } from './Decor';
 
 /** Empty-state hero with decorative shapes. */
 export function Hero() {
@@ -9,15 +9,16 @@ export function Hero() {
       className="relative overflow-hidden rounded-3xl border-2 border-ink bg-surface px-5 py-10 text-center shadow-brutal-lg sm:px-10 sm:py-14"
     >
       <StarShape className="absolute left-[8%] top-[14%] animate-bob motion-reduce:animate-none" size={26} />
-      <SquareShape className="absolute right-[10%] top-[12%] animate-bob motion-reduce:animate-none" size={22} />
+      <TriangleShape className="absolute right-[10%] top-[12%] animate-bob motion-reduce:animate-none" size={22} color="#8C9B7A" rotate={25} />
       <DiamondShape className="absolute bottom-[16%] left-[12%] animate-bob motion-reduce:animate-none" size={22} />
-      <CircleShape className="absolute bottom-[14%] right-[9%] animate-bob motion-reduce:animate-none" size={24} />
-      <SparkleShape className="absolute right-[24%] top-[8%] text-ink" size={16} color="var(--c-ink)" />
-      <SparkleShape className="absolute bottom-[8%] left-[30%]" size={14} color="var(--c-ink)" />
+      <TriangleShape className="absolute bottom-[14%] right-[9%] animate-bob motion-reduce:animate-none" size={20} color="#DC903C" rotate={-15} />
+      <SquareShape className="absolute left-[20%] bottom-[8%] animate-bob motion-reduce:animate-none" size={18} />
+      <CircleShape className="absolute right-[22%] top-[8%] animate-bob motion-reduce:animate-none" size={20} />
+      <SparkleShape className="absolute right-[30%] bottom-[12%] text-ink" size={14} color="var(--c-ink)" />
 
       <span
         aria-hidden="true"
-        className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border-2 border-ink bg-coral text-night shadow-brutal"
+        className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border-2 border-ink bg-tangerine text-night shadow-brutal"
       >
         <ScanSearch size={32} strokeWidth={2.5} />
       </span>
@@ -31,10 +32,17 @@ export function Hero() {
       </p>
       <ul className="mt-6 flex flex-wrap items-center justify-center gap-2">
         <li className="tag-pill bg-coral">25 Classic Dishes</li>
-        <li className="tag-pill bg-grape">Visual Focus Heatmap</li>
-        <li className="tag-pill bg-teal">Private &amp; On-Device</li>
-        <li className="tag-pill bg-sun">Instant Nutrition Breakdown</li>
+        <li className="tag-pill bg-teal">Visual Focus Heatmap</li>
+        <li className="tag-pill bg-sun">Private &amp; On-Device</li>
+        <li className="tag-pill bg-tangerine">Instant Nutrition Breakdown</li>
       </ul>
+
+      <div className="mx-auto mt-6 flex items-center justify-center gap-2 text-xs font-bold text-muted">
+        <span className="flex text-tangerine" aria-hidden="true">★★★★★</span>
+        <span>5/5 on-device accuracy</span>
+        <span>&middot;</span>
+        <span>Zero cloud data leaks</span>
+      </div>
     </section>
   );
 }
