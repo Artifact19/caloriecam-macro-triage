@@ -151,10 +151,10 @@ export function UploadZone({
                 {formatBytes(file.size)}
               </p>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 sm:gap-2.5">
               <button
                 type="button"
-                className="btn-brutal bg-sun"
+                className="btn-brutal flex-1 min-w-[100px] bg-sun sm:flex-initial"
                 onClick={() => pickerRef.current?.click()}
               >
                 <FolderOpen size={18} strokeWidth={2.5} aria-hidden="true" />
@@ -162,14 +162,14 @@ export function UploadZone({
               </button>
               <button
                 type="button"
-                className="btn-brutal bg-teal"
+                className="btn-brutal flex-1 min-w-[110px] bg-teal sm:flex-initial"
                 onClick={onReanalyze}
                 disabled={busy}
               >
                 <RefreshCw size={18} strokeWidth={2.5} aria-hidden="true" />
-                Re-analyze
+                Scan again
               </button>
-              <button type="button" className="btn-brutal bg-surface !text-ink" onClick={onRemove}>
+              <button type="button" className="btn-brutal flex-1 min-w-[100px] bg-surface !text-ink sm:flex-initial" onClick={onRemove}>
                 <Trash2 size={18} strokeWidth={2.5} aria-hidden="true" />
                 Remove
               </button>
@@ -191,30 +191,30 @@ export function UploadZone({
           onDrop={onDrop}
           animate={reduceMotion ? undefined : { scale: dragging ? 1.02 : 1, rotate: dragging ? -0.6 : 0 }}
           transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-          className={`flex min-h-[200px] cursor-pointer flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed border-ink p-6 text-center shadow-brutal ${
+          className={`flex min-h-[180px] sm:min-h-[200px] cursor-pointer flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed border-ink p-4 sm:p-6 text-center shadow-brutal ${
             dragging ? 'bg-sun text-night' : 'bg-surface'
           }`}
         >
           <span
             aria-hidden="true"
-            className="flex h-14 w-14 items-center justify-center rounded-xl border-2 border-ink bg-grape text-night shadow-brutal-sm"
+            className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl border-2 border-ink bg-grape text-night shadow-brutal-sm"
           >
-            {dragging ? <ImagePlus size={28} strokeWidth={2.5} /> : <UploadCloud size={28} strokeWidth={2.5} />}
+            {dragging ? <ImagePlus size={26} strokeWidth={2.5} /> : <UploadCloud size={26} strokeWidth={2.5} />}
           </span>
-          <p className="font-display text-lg font-bold">
+          <p className="font-display text-base sm:text-lg font-bold">
             {dragging ? 'Drop it!' : 'Drop a meal photo here'}
           </p>
-          <p className="text-sm font-medium opacity-80">
+          <p className="text-xs sm:text-sm font-medium opacity-80">
             Click to browse, or paste with Ctrl/Cmd+V &middot; JPEG, PNG, WebP &middot; up to 10 MB
           </p>
         </motion.div>
       )}
 
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap gap-2.5 sm:gap-3">
         {!file && (
           <button
             type="button"
-            className="btn-brutal bg-sun"
+            className="btn-brutal flex-1 min-w-[130px] bg-sun sm:flex-initial"
             onClick={() => pickerRef.current?.click()}
           >
             <FolderOpen size={18} strokeWidth={2.5} aria-hidden="true" />
@@ -223,7 +223,7 @@ export function UploadZone({
         )}
         <button
           type="button"
-          className="btn-brutal bg-tangerine"
+          className="btn-brutal flex-1 min-w-[130px] bg-tangerine sm:flex-initial"
           onClick={() => cameraRef.current?.click()}
         >
           <Camera size={18} strokeWidth={2.5} aria-hidden="true" />

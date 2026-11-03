@@ -70,7 +70,7 @@ export default function App() {
         {announcement}
       </div>
 
-      <main className="mx-auto mt-6 w-full max-w-6xl space-y-6 px-4 sm:px-6">
+      <main className="mx-auto mt-6 w-full max-w-6xl space-y-6 px-3 sm:px-6">
         {state.status === 'idle' && !state.file && <Hero />}
 
         <div className="grid gap-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-start">
@@ -109,7 +109,7 @@ export default function App() {
         </div>
       </main>
 
-      <footer className="mx-auto mt-10 w-full max-w-6xl px-4 sm:px-6">
+      <footer className="mx-auto mt-10 w-full max-w-6xl px-3 sm:px-6">
         <p className="rounded-xl border-2 border-ink bg-surface px-4 py-3 text-center text-sm font-bold shadow-brutal-sm">
           Estimates are approximate and not medical advice.
         </p>

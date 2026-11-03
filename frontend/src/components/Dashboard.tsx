@@ -4,7 +4,6 @@ import { RefreshCw } from 'lucide-react';
 import { ConfidenceGauge } from './ConfidenceGauge';
 import { HeatmapViewer } from './HeatmapViewer';
 import { NutritionCard } from './NutritionCard';
-import { TelemetryBadge } from './TelemetryBadge';
 import { TopKList } from './TopKList';
 import { TriageBanner } from './TriageBanner';
 import type { PredictState } from '../hooks/usePredict';
@@ -73,7 +72,7 @@ export function Dashboard({
       >
         <div className="min-w-0 space-y-3">
           <p className="text-xs font-bold uppercase tracking-wide text-muted">Best Dish Match</p>
-          <h2 className="break-words font-display text-4xl font-bold leading-none sm:text-5xl" data-testid="top1-name">
+          <h2 className="break-words font-display text-3xl font-bold leading-tight sm:text-5xl" data-testid="top1-name">
             {result.top1.display_name}
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -124,15 +123,6 @@ export function Dashboard({
 
       <motion.div variants={variants}>
         <TopKList items={result.topk} activeLabel={view?.label ?? result.top1.label} />
-      </motion.div>
-
-      <motion.div variants={variants}>
-        <TelemetryBadge
-          latency={result.latency}
-          engine={result.engine}
-          modelVersion={result.model_version}
-          roundTripMs={state.roundTripMs}
-        />
       </motion.div>
     </motion.div>
   );

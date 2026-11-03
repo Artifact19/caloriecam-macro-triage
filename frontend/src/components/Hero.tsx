@@ -6,23 +6,23 @@ export function Hero() {
   return (
     <section
       aria-label="Welcome"
-      className="relative overflow-hidden rounded-3xl border-2 border-ink bg-surface px-5 py-10 text-center shadow-brutal-lg sm:px-10 sm:py-14"
+      className="relative overflow-hidden rounded-3xl border-2 border-ink bg-surface px-4 py-8 text-center shadow-brutal-lg sm:px-10 sm:py-14"
     >
-      <StarShape className="absolute left-[8%] top-[14%] animate-bob motion-reduce:animate-none" size={26} />
-      <TriangleShape className="absolute right-[10%] top-[12%] animate-bob motion-reduce:animate-none" size={22} color="#8C9B7A" rotate={25} />
-      <DiamondShape className="absolute bottom-[16%] left-[12%] animate-bob motion-reduce:animate-none" size={22} />
-      <TriangleShape className="absolute bottom-[14%] right-[9%] animate-bob motion-reduce:animate-none" size={20} color="#DC903C" rotate={-15} />
-      <SquareShape className="absolute left-[20%] bottom-[8%] animate-bob motion-reduce:animate-none" size={18} />
-      <CircleShape className="absolute right-[22%] top-[8%] animate-bob motion-reduce:animate-none" size={20} />
-      <SparkleShape className="absolute right-[30%] bottom-[12%] text-ink" size={14} color="var(--c-ink)" />
+      <StarShape className="absolute left-[8%] top-[14%] hidden animate-bob motion-reduce:animate-none sm:block" size={26} />
+      <TriangleShape className="absolute right-[10%] top-[12%] hidden animate-bob motion-reduce:animate-none sm:block" size={22} color="#8C9B7A" rotate={25} />
+      <DiamondShape className="absolute bottom-[16%] left-[12%] hidden animate-bob motion-reduce:animate-none sm:block" size={22} />
+      <TriangleShape className="absolute bottom-[14%] right-[9%] hidden animate-bob motion-reduce:animate-none sm:block" size={20} color="#DC903C" rotate={-15} />
+      <SquareShape className="absolute bottom-[8%] left-[20%] hidden animate-bob motion-reduce:animate-none sm:block" size={18} />
+      <CircleShape className="absolute right-[22%] top-[8%] hidden animate-bob motion-reduce:animate-none sm:block" size={20} />
+      <SparkleShape className="absolute bottom-[12%] right-[30%] hidden text-ink sm:block" size={14} color="var(--c-ink)" />
 
       <span
         aria-hidden="true"
-        className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border-2 border-ink bg-tangerine text-night shadow-brutal"
+        className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border-2 border-ink bg-tangerine text-night shadow-brutal sm:mb-5 sm:h-16 sm:w-16"
       >
-        <ScanSearch size={32} strokeWidth={2.5} />
+        <ScanSearch size={30} strokeWidth={2.5} />
       </span>
-      <h2 className="mx-auto max-w-2xl font-display text-4xl font-bold leading-[1.05] sm:text-6xl">
+      <h2 className="mx-auto max-w-2xl font-display text-3xl font-bold leading-tight sm:text-5xl lg:text-6xl">
         Snap a meal.
         <br />
         <span className="text-muted">Know the macros.</span>

@@ -17,16 +17,16 @@ const STATUS_TAG: Record<BackendStatus, { label: string; className: string }> = 
 export function Header({ dark, onToggleDark, backendStatus }: HeaderProps) {
   const tag = STATUS_TAG[backendStatus];
   return (
-    <header className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 pt-5 sm:px-6">
-      <div className="flex items-center gap-3.5">
+    <header className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-2.5 px-3 pt-4 sm:gap-3 sm:px-6 sm:pt-5">
+      <div className="flex items-center gap-2.5 sm:gap-3.5">
         <img
           src="/app-icon.jpg"
           alt="CalorieCAM mascot"
-          className="h-12 w-12 shrink-0 rounded-2xl border-2 border-ink object-cover shadow-brutal"
+          className="h-10 w-10 shrink-0 rounded-xl border-2 border-ink object-cover shadow-brutal sm:h-12 sm:w-12 sm:rounded-2xl"
         />
         <div className="min-w-0">
-          <h1 className="font-display text-2xl font-bold leading-none sm:text-3xl">CalorieCAM</h1>
-          <p className="mt-1 text-xs font-medium text-muted sm:text-sm">
+          <h1 className="font-display text-xl font-bold leading-none sm:text-3xl">CalorieCAM</h1>
+          <p className="mt-1 text-[11px] font-medium text-muted sm:text-sm">
             Smart visual meal recognition &amp; instant nutrition tracker.
           </p>
         </div>

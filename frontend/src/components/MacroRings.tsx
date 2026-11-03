@@ -35,36 +35,38 @@ export function MacroRings({ protein_g, carbs_g, fat_g, split }: MacroRingsProps
 
   return (
     <div className="space-y-4">
-      <ul className="grid grid-cols-3 gap-2" aria-label="Macro breakdown">
+      <ul className="grid grid-cols-3 gap-1 sm:gap-2" aria-label="Macro breakdown">
         {rings.map((r) => (
           <li key={r.key} className="flex flex-col items-center text-center">
-            <div className="relative h-[104px] w-[104px]" data-testid={`ring-${r.key}`}>
-              <RadialBarChart
-                width={104}
-                height={104}
-                innerRadius="68%"
-                outerRadius="100%"
-                data={[{ name: r.name, value: Math.max(0, Math.min(100, r.pct)), fill: r.color }]}
-                startAngle={90}
-                endAngle={-270}
-                barSize={14}
-              >
-                <PolarAngleAxis type="number" domain={[0, 100]} tick={false} />
-                <RadialBar
-                  dataKey="value"
-                  background={{ fill: 'var(--c-sunken)' }}
-                  cornerRadius={0}
-                  stroke="#141414"
-                  strokeWidth={2}
-                  isAnimationActive={!reduceMotion}
-                />
-              </RadialBarChart>
+            <div className="relative flex h-[88px] w-[88px] items-center justify-center sm:h-[104px] sm:w-[104px]" data-testid={`ring-${r.key}`}>
+              <div className="origin-center scale-[0.84] sm:scale-100">
+                <RadialBarChart
+                  width={104}
+                  height={104}
+                  innerRadius="68%"
+                  outerRadius="100%"
+                  data={[{ name: r.name, value: Math.max(0, Math.min(100, r.pct)), fill: r.color }]}
+                  startAngle={90}
+                  endAngle={-270}
+                  barSize={14}
+                >
+                  <PolarAngleAxis type="number" domain={[0, 100]} tick={false} />
+                  <RadialBar
+                    dataKey="value"
+                    background={{ fill: 'var(--c-sunken)' }}
+                    cornerRadius={0}
+                    stroke="#141414"
+                    strokeWidth={2}
+                    isAnimationActive={!reduceMotion}
+                  />
+                </RadialBarChart>
+              </div>
               <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center leading-tight">
-                <span className="tabular font-display text-lg font-bold">{formatGrams(r.grams)}</span>
+                <span className="tabular font-display text-base font-bold sm:text-lg">{formatGrams(r.grams)}</span>
               </div>
             </div>
-            <span className="mt-1 text-sm font-bold">{r.name}</span>
-            <span className="tabular text-xs font-medium text-muted">
+            <span className="mt-1 text-xs font-bold sm:text-sm">{r.name}</span>
+            <span className="tabular text-[10px] font-medium text-muted sm:text-xs">
               {r.pct.toFixed(0)}% of macro kcal
             </span>
           </li>

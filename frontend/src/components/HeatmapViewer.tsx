@@ -16,8 +16,6 @@ interface HeatmapViewerProps {
 
 type Tab = 'original' | 'attention';
 
-const LEGEND_GRADIENT = 'linear-gradient(90deg, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000)';
-
 export function HeatmapViewer({
   originalUrl,
   width,
@@ -26,10 +24,8 @@ export function HeatmapViewer({
   targetName,
   busy = false,
 }: HeatmapViewerProps) {
-  const [opacity, setOpacity] = useState(55);
   const [tab, setTab] = useState<Tab>('attention');
   const [showInfo, setShowInfo] = useState(false);
-  const sliderId = useId();
   const infoId = useId();
   const aspectRatio = `${Math.max(1, width)} / ${Math.max(1, height)}`;
 
@@ -67,7 +63,7 @@ export function HeatmapViewer({
             alt={`Visual focus heatmap${targetName ? ` for ${targetName}` : ''}`}
             data-testid="heatmap-overlay"
             className="absolute inset-0 h-full w-full object-contain transition-opacity duration-150 motion-reduce:transition-none"
-            style={{ opacity: opacity / 100 }}
+            style={{ opacity: 0.65 }}
           />
         ) : (
           <div
@@ -146,42 +142,6 @@ export function HeatmapViewer({
         >
           The focus heatmap highlights the specific food areas and textures identified on your plate.
         </p>
-      )}
-
-      {gradcam && (
-        <div className="mt-4 space-y-3">
-          <div>
-            <label htmlFor={sliderId} className="flex items-center justify-between text-sm font-bold">
-              <span>Heatmap opacity</span>
-              <span className="tabular rounded-full border-2 border-ink bg-grape px-2 text-night">
-                {opacity}%
-              </span>
-            </label>
-            <input
-              id={sliderId}
-              type="range"
-              min={0}
-              max={100}
-              step={1}
-              value={opacity}
-              aria-label="Heatmap opacity"
-              onChange={(e) => setOpacity(Number(e.target.value))}
-              className="range-brutal"
-            />
-          </div>
-          <div>
-            <div
-              className="h-4 w-full rounded-full border-2 border-ink"
-              style={{ background: LEGEND_GRADIENT }}
-              role="img"
-              aria-label="Legend: blue is low focus, red is high focus"
-            />
-            <div className="mt-1 flex justify-between text-xs font-bold">
-              <span>Low focus</span>
-              <span>Strong focus</span>
-            </div>
-          </div>
-        </div>
       )}
     </div>
   );
