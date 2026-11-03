@@ -36,7 +36,7 @@ def test_onnx_fp32_logits_match_pytorch_logits(
         batch = preprocess_rgb(rgb)
         pt_logits = pt_engine.predict_logits(batch)
         ort_logits = ort_engine.predict_logits(batch)
-        assert pt_logits.shape == (1, 25)
-        assert ort_logits.shape == (1, 25)
+        assert pt_logits.shape == ort_logits.shape
+        assert pt_logits.shape[0] == 1
         assert np.allclose(pt_logits, ort_logits, atol=1e-3)
 

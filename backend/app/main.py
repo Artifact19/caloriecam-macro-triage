@@ -33,7 +33,7 @@ def create_app(settings: Optional[Settings] = None) -> FastAPI:
     app = FastAPI(
         title="Visual Meal Recognition & Macro Triage API",
         description=(
-            "Local-first food classification (MobileNetV3-Large, 25 Food-101 dishes), "
+            "Local-first food classification (MobileNetV3-Large, 101 Food-101 dishes), "
             "Grad-CAM explainability, macro estimation and confidence triage. "
             "Estimates are approximate and not medical advice."
         ),

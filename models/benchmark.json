@@ -1,46 +1,46 @@
 {
   "pytorch": {
-    "mean_ms": 23.33,
-    "p50_ms": 22.65,
-    "p95_ms": 29.04,
-    "p99_ms": 31.21,
-    "throughput_ips": 42.9,
-    "size_mb": 16.34,
-    "top1": 1.0,
-    "macro_f1": 1.0
+    "mean_ms": 21.47,
+    "p50_ms": 21.15,
+    "p95_ms": 22.89,
+    "p99_ms": 23.82,
+    "throughput_ips": 46.6,
+    "size_mb": 16.71,
+    "top1": 0.8366,
+    "macro_f1": 0.8358
   },
   "onnx_fp32": {
-    "mean_ms": 4.12,
-    "p50_ms": 3.89,
-    "p95_ms": 5.49,
-    "p99_ms": 6.57,
-    "throughput_ips": 243.0,
-    "best_threads": 12,
-    "size_mb": 16.14,
-    "top1": 1.0,
-    "macro_f1": 1.0
+    "mean_ms": 4.21,
+    "p50_ms": 4.13,
+    "p95_ms": 5.04,
+    "p99_ms": 5.34,
+    "throughput_ips": 237.4,
+    "best_threads": 4,
+    "size_mb": 16.51,
+    "top1": 0.8366,
+    "macro_f1": 0.8358
   },
   "onnx_int8_dynamic": {
-    "mean_ms": 22.16,
-    "p50_ms": 22.09,
-    "p95_ms": 23.81,
-    "p99_ms": 24.16,
-    "throughput_ips": 45.1,
+    "mean_ms": 21.65,
+    "p50_ms": 21.11,
+    "p95_ms": 24.67,
+    "p99_ms": 27.12,
+    "throughput_ips": 46.2,
     "best_threads": 4,
-    "size_mb": 4.25,
-    "top1": 0.4688,
-    "macro_f1": 0.2909
+    "size_mb": 4.34,
+    "top1": 0.6267,
+    "macro_f1": 0.6177
   },
   "onnx_int8_static": {
-    "mean_ms": 3.67,
-    "p50_ms": 3.63,
-    "p95_ms": 4.32,
-    "p99_ms": 4.56,
-    "throughput_ips": 272.3,
-    "best_threads": 4,
-    "size_mb": 4.5,
-    "top1": 0.9688,
-    "macro_f1": 0.8552
+    "mean_ms": 3.49,
+    "p50_ms": 3.51,
+    "p95_ms": 3.83,
+    "p99_ms": 4.16,
+    "throughput_ips": 286.9,
+    "best_threads": 12,
+    "size_mb": 4.6,
+    "top1": 0.4752,
+    "macro_f1": 0.4568
   },
   "default_engine": "onnx_fp32",
   "system_info": {
@@ -48,6 +48,6 @@
     "cores": 12,
     "os": "Windows 11",
     "onnxruntime_version": "1.20.1",
-    "torch_version": "2.5.1+cpu"
+    "torch_version": "2.5.1+cu124"
   }
 }

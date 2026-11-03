@@ -1,6 +1,8 @@
 {
   "best_num_workers": 0,
   "throughput_imgs_per_sec": {
-    "0": 51.4
+    "0": 68.6,
+    "2": 26.0,
+    "4": 13.2
   }
 }

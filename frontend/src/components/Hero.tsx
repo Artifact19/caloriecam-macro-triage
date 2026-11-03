@@ -28,10 +28,10 @@ export function Hero() {
         <span className="text-muted">Know the macros.</span>
       </h2>
       <p className="mx-auto mt-4 max-w-xl text-base font-medium text-muted sm:text-lg">
-        Drop, paste or photograph any of our 25 supported dishes. CalorieCAM identifies the meal, highlights the plate, and provides instant nutritional estimates.
+        Drop, paste or photograph any of our 101 supported dishes. CalorieCAM identifies the meal, highlights the plate, and provides instant nutritional estimates.
       </p>
       <ul className="mt-6 flex flex-wrap items-center justify-center gap-2">
-        <li className="tag-pill bg-coral">25 Classic Dishes</li>
+        <li className="tag-pill bg-coral">101 Classic Dishes</li>
         <li className="tag-pill bg-teal">Visual Focus Heatmap</li>
         <li className="tag-pill bg-sun">Private &amp; On-Device</li>
         <li className="tag-pill bg-tangerine">Instant Nutrition Breakdown</li>

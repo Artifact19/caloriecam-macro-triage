@@ -17,9 +17,9 @@ def test_all_25_classes_present_and_consistent(synth_client: TestClient) -> None
     resp = synth_client.get("/api/nutrition")
     assert resp.status_code == 200
     payload = resp.json()
-    assert len(payload["items"]) == 25
+    assert len(payload["items"]) == len(classes)
     returned = [item["dish"] for item in payload["items"]]
-    assert returned == classes
+    assert set(returned) == set(classes)
 
 
 @pytest.mark.parametrize("variant", ["Chicken Curry", "chicken-curry", "chicken_curry", "  CHICKEN_CURRY  "])

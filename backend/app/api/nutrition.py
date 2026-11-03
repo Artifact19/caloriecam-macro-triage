@@ -18,7 +18,7 @@ def _service(request: Request) -> NutritionService:
     return rt.nutrition
 
 
-@router.get("/nutrition", response_model=NutritionList, summary="List all 25 dishes in the nutrition registry")
+@router.get("/nutrition", response_model=NutritionList, summary="List all dishes in the nutrition registry")
 def list_nutrition(request: Request) -> NutritionList:
     svc = _service(request)
     return NutritionList(disclaimer=svc.disclaimer, items=svc.list_all())

@@ -67,7 +67,7 @@ def build_train_transform(img_size: int = IMG_SIZE):
                 num_holes_range=(1, 4),
                 hole_height_range=(16, 40),
                 hole_width_range=(16, 40),
-                fill=0,
+                fill_value=0,
                 p=0.2,
             ),
             A.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD),
@@ -80,7 +80,7 @@ def build_single_aug(name: str, img_size: int = IMG_SIZE):
     """Individual augmentation (for the EDA visual grids): 'colorjitter' | 'affine'."""
     import albumentations as A
 
-    base = [A.LongestMaxSize(max_size=256), A.CenterCrop(img_size, img_size)]
+    base = [A.SmallestMaxSize(max_size=256), A.CenterCrop(img_size, img_size)]
     if name == "colorjitter":
         base.append(A.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.05, p=1.0))
     elif name == "affine":

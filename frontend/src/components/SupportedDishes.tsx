@@ -9,29 +9,69 @@ interface DishCategory {
 
 export const DISH_CATEGORIES: DishCategory[] = [
   {
-    name: 'Mains & Italian',
+    name: 'Italian & Pasta',
     color: 'bg-coral',
-    dishes: ['Pizza', 'Lasagna', 'Spaghetti Bolognese', 'Steak', 'Grilled Salmon'],
+    dishes: [
+      'Pizza', 'Lasagna', 'Spaghetti Bolognese', 'Spaghetti Carbonara',
+      'Ravioli', 'Gnocchi', 'Risotto', 'Bruschetta', 'Garlic Bread', 'Cannoli'
+    ],
   },
   {
-    name: 'Asian & Noodles',
+    name: 'Asian & Specialties',
     color: 'bg-sun',
-    dishes: ['Chicken Curry', 'Ramen', 'Pad Thai', 'Fried Rice', 'Sushi'],
+    dishes: [
+      'Chicken Curry', 'Ramen', 'Pad Thai', 'Fried Rice', 'Sushi',
+      'Sashimi', 'Gyoza', 'Dumplings', 'Takoyaki', 'Bibimbap',
+      'Peking Duck', 'Pho', 'Edamame', 'Miso Soup', 'Hot and Sour Soup', 'Spring Rolls'
+    ],
   },
   {
-    name: 'Fast Food & Casual',
+    name: 'Meat, Steaks & Seafood',
     color: 'bg-tangerine',
-    dishes: ['Hamburger', 'Hot Dog', 'French Fries', 'Tacos', 'Samosa'],
+    dishes: [
+      'Steak', 'Filet Mignon', 'Prime Rib', 'Pork Chop', 'Baby Back Ribs',
+      'Grilled Salmon', 'Fish and Chips', 'Crab Cakes', 'Lobster Bisque',
+      'Lobster Roll Sandwich', 'Mussels', 'Oysters', 'Scallops', 'Fried Calamari',
+      'Paella', 'Ceviche', 'Tuna Tartare', 'Beef Carpaccio', 'Beef Tartare', 'Escargots', 'Foie Gras'
+    ],
   },
   {
-    name: 'Salads & Dips',
+    name: 'Fast Food, Sandwiches & Snacks',
+    color: 'bg-coral',
+    dishes: [
+      'Hamburger', 'Hot Dog', 'French Fries', 'Onion Rings', 'Poutine',
+      'Tacos', 'Chicken Quesadilla', 'Nachos', 'Samosa', 'Falafel',
+      'Macaroni and Cheese', 'Club Sandwich', 'Grilled Cheese Sandwich',
+      'Pulled Pork Sandwich', 'Croque Madame', 'Chicken Wings', 'Shrimp and Grits'
+    ],
+  },
+  {
+    name: 'Salads, Dips & Starters',
     color: 'bg-teal',
-    dishes: ['Caesar Salad', 'Greek Salad', 'Guacamole', 'Hummus'],
+    dishes: [
+      'Caesar Salad', 'Greek Salad', 'Caprese Salad', 'Beet Salad',
+      'Seaweed Salad', 'Guacamole', 'Hummus', 'Cheese Plate',
+      'Deviled Eggs', 'French Onion Soup', 'Clam Chowder'
+    ],
   },
   {
-    name: 'Breakfast & Sweets',
+    name: 'Breakfast & Brunch',
     color: 'bg-grape',
-    dishes: ['Omelette', 'Pancakes', 'Waffles', 'Donuts', 'Chocolate Cake', 'Ice Cream'],
+    dishes: [
+      'Omelette', 'Eggs Benedict', 'Huevos Rancheros', 'Breakfast Burrito',
+      'Pancakes', 'Waffles', 'French Toast'
+    ],
+  },
+  {
+    name: 'Desserts, Cakes & Pastries',
+    color: 'bg-sun',
+    dishes: [
+      'Chocolate Cake', 'Cheesecake', 'Red Velvet Cake', 'Carrot Cake',
+      'Apple Pie', 'Strawberry Shortcake', 'Tiramisu', 'Panna Cotta',
+      'Creme Brulee', 'Chocolate Mousse', 'Baklava', 'Beignets',
+      'Churros', 'Donuts', 'Cupcakes', 'Macarons', 'Bread Pudding',
+      'Ice Cream', 'Frozen Yogurt'
+    ],
   },
 ];
 
@@ -55,10 +95,10 @@ export function SupportedDishes() {
           </span>
           <div>
             <h3 className="font-display text-base font-bold sm:text-lg">
-              25 Supported Dishes
+              101 Supported Dishes
             </h3>
             <p className="text-xs text-muted sm:text-sm">
-              CalorieCAM is tuned to recognize these 25 popular meal categories.
+              CalorieCAM is tuned to recognize all 101 Food-101 culinary categories.
             </p>
           </div>
         </div>
@@ -89,7 +129,7 @@ export function SupportedDishes() {
                     className={`inline-block h-3 w-3 rounded-full border border-ink ${cat.color}`}
                   />
                   <span className="font-display text-xs font-bold uppercase tracking-wider text-muted">
-                    {cat.name}
+                    {cat.name} ({cat.dishes.length})
                   </span>
                 </div>
                 <ul className="flex flex-wrap gap-1.5">
@@ -106,7 +146,7 @@ export function SupportedDishes() {
             ))}
           </div>
           <p className="rounded-lg border-2 border-ink bg-panel p-2.5 text-xs font-medium text-night">
-            <strong>Looking for another dish?</strong> If a meal outside these 25 is uploaded, CalorieCAM flags it with alternative suggestions rather than guessing blindly.
+            <strong>Looking for another dish?</strong> If a meal outside these 101 is uploaded, CalorieCAM flags it with alternative suggestions rather than guessing blindly.
           </p>
         </div>
       )}

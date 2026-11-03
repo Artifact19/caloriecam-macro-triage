@@ -32,6 +32,7 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--fast", action="store_true", help="set FAST_DEV=1 for a quick smoke training run")
     ap.add_argument("--kernel", default="python3", help="Jupyter kernel name (default: python3)")
+    ap.add_argument("--only", nargs="*", help="Only execute specified notebook name(s)")
     ap.add_argument(
         "--out-dir",
         default=str(NOTEBOOKS_DIR),
@@ -45,8 +46,10 @@ def main(argv: list[str] | None = None) -> int:
     out_dir = Path(args.out_dir).resolve()
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    targets = args.only if args.only else NOTEBOOK_NAMES
+
     total_t0 = time.perf_counter()
-    for name in NOTEBOOK_NAMES:
+    for name in targets:
         src = NOTEBOOKS_DIR / name
         dst = out_dir / name
         if not src.is_file():

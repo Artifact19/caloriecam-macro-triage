@@ -1,6 +1,7 @@
 """Tests for ``GET /health`` and graceful startup when model artifacts are absent."""
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 from fastapi.testclient import TestClient
@@ -15,8 +16,9 @@ def test_health_ok_with_loaded_model(synth_client: TestClient) -> None:
     body = resp.json()
     assert body["status"] == "ok"
     assert body["model_loaded"] is True
-    assert body["num_classes"] == 25
-    assert len(body["classes"]) == 25
+    classes = json.loads((REPO_ROOT / "data" / "subset_classes.json").read_text(encoding="utf-8"))
+    assert body["num_classes"] == len(classes)
+    assert len(body["classes"]) == len(classes)
     assert "onnx_fp32" in body["engines"]
     assert "pytorch" in body["engines"]
     assert body["default_engine"] == "onnx_fp32"

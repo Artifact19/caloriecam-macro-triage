@@ -8,7 +8,7 @@ from ..schemas import Alternative, NutritionInfo, Prediction, Triage
 MESSAGES = {
     "confident": "High confidence prediction.",
     "review": "Moderately confident. Check the alternatives below.",
-    "uncertain": "Low confidence. The dish may not be among the 25 supported classes.",
+    "uncertain": "Low confidence. The dish may not be among the 101 supported classes.",
 }
 
 

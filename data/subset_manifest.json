@@ -1,127 +1,507 @@
 {
-  "pizza": {
-    "food101_idx": 93,
-    "train_count": 20,
-    "test_count": 10
+  "apple_pie": {
+    "food101_idx": 0,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "baby_back_ribs": {
+    "food101_idx": 1,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "baklava": {
+    "food101_idx": 2,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "beef_carpaccio": {
+    "food101_idx": 3,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "beef_tartare": {
+    "food101_idx": 4,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "beet_salad": {
+    "food101_idx": 5,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "beignets": {
+    "food101_idx": 6,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "bibimbap": {
+    "food101_idx": 7,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "bread_pudding": {
+    "food101_idx": 8,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "breakfast_burrito": {
+    "food101_idx": 9,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "bruschetta": {
+    "food101_idx": 10,
+    "train_count": 750,
+    "test_count": 250
   },
   "caesar_salad": {
-    "food101_idx": 0,
-    "train_count": 20,
-    "test_count": 10
+    "food101_idx": 11,
+    "train_count": 750,
+    "test_count": 250
   },
-  "greek_salad": {
-    "food101_idx": 82,
-    "train_count": 20,
-    "test_count": 10
+  "cannoli": {
+    "food101_idx": 12,
+    "train_count": 750,
+    "test_count": 250
   },
-  "steak": {
-    "food101_idx": 97,
-    "train_count": 20,
-    "test_count": 10
+  "caprese_salad": {
+    "food101_idx": 13,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "carrot_cake": {
+    "food101_idx": 14,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "ceviche": {
+    "food101_idx": 15,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "cheese_plate": {
+    "food101_idx": 16,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "cheesecake": {
+    "food101_idx": 17,
+    "train_count": 750,
+    "test_count": 250
   },
   "chicken_curry": {
-    "food101_idx": 1,
-    "train_count": 20,
-    "test_count": 10
+    "food101_idx": 18,
+    "train_count": 750,
+    "test_count": 250
   },
-  "hamburger": {
-    "food101_idx": 85,
-    "train_count": 20,
-    "test_count": 10
+  "chicken_quesadilla": {
+    "food101_idx": 19,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "chicken_wings": {
+    "food101_idx": 20,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "chocolate_cake": {
+    "food101_idx": 21,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "chocolate_mousse": {
+    "food101_idx": 22,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "churros": {
+    "food101_idx": 23,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "clam_chowder": {
+    "food101_idx": 24,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "club_sandwich": {
+    "food101_idx": 25,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "crab_cakes": {
+    "food101_idx": 26,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "creme_brulee": {
+    "food101_idx": 27,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "croque_madame": {
+    "food101_idx": 28,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "cup_cakes": {
+    "food101_idx": 29,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "deviled_eggs": {
+    "food101_idx": 30,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "donuts": {
+    "food101_idx": 31,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "dumplings": {
+    "food101_idx": 32,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "edamame": {
+    "food101_idx": 33,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "eggs_benedict": {
+    "food101_idx": 34,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "escargots": {
+    "food101_idx": 35,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "falafel": {
+    "food101_idx": 36,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "filet_mignon": {
+    "food101_idx": 37,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "fish_and_chips": {
+    "food101_idx": 38,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "foie_gras": {
+    "food101_idx": 39,
+    "train_count": 750,
+    "test_count": 250
   },
   "french_fries": {
-    "food101_idx": 80,
-    "train_count": 20,
-    "test_count": 10
+    "food101_idx": 40,
+    "train_count": 750,
+    "test_count": 250
   },
-  "sushi": {
-    "food101_idx": 98,
-    "train_count": 20,
-    "test_count": 10
+  "french_onion_soup": {
+    "food101_idx": 41,
+    "train_count": 750,
+    "test_count": 250
   },
-  "ramen": {
-    "food101_idx": 94,
-    "train_count": 20,
-    "test_count": 10
+  "french_toast": {
+    "food101_idx": 42,
+    "train_count": 750,
+    "test_count": 250
   },
-  "spaghetti_bolognese": {
-    "food101_idx": 96,
-    "train_count": 20,
-    "test_count": 10
-  },
-  "tacos": {
-    "food101_idx": 99,
-    "train_count": 20,
-    "test_count": 10
+  "fried_calamari": {
+    "food101_idx": 43,
+    "train_count": 750,
+    "test_count": 250
   },
   "fried_rice": {
-    "food101_idx": 81,
-    "train_count": 20,
-    "test_count": 10
+    "food101_idx": 44,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "frozen_yogurt": {
+    "food101_idx": 45,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "garlic_bread": {
+    "food101_idx": 46,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "gnocchi": {
+    "food101_idx": 47,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "greek_salad": {
+    "food101_idx": 48,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "grilled_cheese_sandwich": {
+    "food101_idx": 49,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "grilled_salmon": {
+    "food101_idx": 50,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "guacamole": {
+    "food101_idx": 51,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "gyoza": {
+    "food101_idx": 52,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "hamburger": {
+    "food101_idx": 53,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "hot_and_sour_soup": {
+    "food101_idx": 54,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "hot_dog": {
+    "food101_idx": 55,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "huevos_rancheros": {
+    "food101_idx": 56,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "hummus": {
+    "food101_idx": 57,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "ice_cream": {
+    "food101_idx": 58,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "lasagna": {
+    "food101_idx": 59,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "lobster_bisque": {
+    "food101_idx": 60,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "lobster_roll_sandwich": {
+    "food101_idx": 61,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "macaroni_and_cheese": {
+    "food101_idx": 62,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "macarons": {
+    "food101_idx": 63,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "miso_soup": {
+    "food101_idx": 64,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "mussels": {
+    "food101_idx": 65,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "nachos": {
+    "food101_idx": 66,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "omelette": {
+    "food101_idx": 67,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "onion_rings": {
+    "food101_idx": 68,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "oysters": {
+    "food101_idx": 69,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "pad_thai": {
+    "food101_idx": 70,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "paella": {
+    "food101_idx": 71,
+    "train_count": 750,
+    "test_count": 250
   },
   "pancakes": {
+    "food101_idx": 72,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "panna_cotta": {
+    "food101_idx": 73,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "peking_duck": {
+    "food101_idx": 74,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "pho": {
+    "food101_idx": 75,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "pizza": {
+    "food101_idx": 76,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "pork_chop": {
+    "food101_idx": 77,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "poutine": {
+    "food101_idx": 78,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "prime_rib": {
+    "food101_idx": 79,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "pulled_pork_sandwich": {
+    "food101_idx": 80,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "ramen": {
+    "food101_idx": 81,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "ravioli": {
+    "food101_idx": 82,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "red_velvet_cake": {
+    "food101_idx": 83,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "risotto": {
+    "food101_idx": 84,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "samosa": {
+    "food101_idx": 85,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "sashimi": {
+    "food101_idx": 86,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "scallops": {
+    "food101_idx": 87,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "seaweed_salad": {
+    "food101_idx": 88,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "shrimp_and_grits": {
+    "food101_idx": 89,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "spaghetti_bolognese": {
+    "food101_idx": 90,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "spaghetti_carbonara": {
+    "food101_idx": 91,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "spring_rolls": {
     "food101_idx": 92,
-    "train_count": 20,
-    "test_count": 10
+    "train_count": 750,
+    "test_count": 250
+  },
+  "steak": {
+    "food101_idx": 93,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "strawberry_shortcake": {
+    "food101_idx": 94,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "sushi": {
+    "food101_idx": 95,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "tacos": {
+    "food101_idx": 96,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "takoyaki": {
+    "food101_idx": 97,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "tiramisu": {
+    "food101_idx": 98,
+    "train_count": 750,
+    "test_count": 250
+  },
+  "tuna_tartare": {
+    "food101_idx": 99,
+    "train_count": 750,
+    "test_count": 250
   },
   "waffles": {
     "food101_idx": 100,
-    "train_count": 20,
-    "test_count": 10
-  },
-  "ice_cream": {
-    "food101_idx": 88,
-    "train_count": 20,
-    "test_count": 10
-  },
-  "chocolate_cake": {
-    "food101_idx": 2,
-    "train_count": 20,
-    "test_count": 10
-  },
-  "omelette": {
-    "food101_idx": 90,
-    "train_count": 20,
-    "test_count": 10
-  },
-  "guacamole": {
-    "food101_idx": 84,
-    "train_count": 20,
-    "test_count": 10
-  },
-  "hot_dog": {
-    "food101_idx": 86,
-    "train_count": 20,
-    "test_count": 10
-  },
-  "lasagna": {
-    "food101_idx": 89,
-    "train_count": 20,
-    "test_count": 10
-  },
-  "samosa": {
-    "food101_idx": 95,
-    "train_count": 20,
-    "test_count": 10
-  },
-  "hummus": {
-    "food101_idx": 87,
-    "train_count": 20,
-    "test_count": 10
-  },
-  "pad_thai": {
-    "food101_idx": 91,
-    "train_count": 20,
-    "test_count": 10
-  },
-  "donuts": {
-    "food101_idx": 3,
-    "train_count": 20,
-    "test_count": 10
-  },
-  "grilled_salmon": {
-    "food101_idx": 83,
-    "train_count": 20,
-    "test_count": 10
+    "train_count": 750,
+    "test_count": 250
   }
 }
