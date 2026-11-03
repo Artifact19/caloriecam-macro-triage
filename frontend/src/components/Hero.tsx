@@ -27,14 +27,14 @@ export function Hero() {
         <span className="text-muted">Know the macros.</span>
       </h2>
       <p className="mx-auto mt-4 max-w-xl text-base font-medium text-muted sm:text-lg">
-        Drop, paste or photograph a dish. The model names it, shows what it looked at, and tells you
+        Drop, paste or photograph any of the 25 supported dishes. The model names it, shows what it looked at, and tells you
         when it is not sure.
       </p>
       <ul className="mt-6 flex flex-wrap items-center justify-center gap-2">
-        <li className="tag-pill bg-surface !text-ink">Bold borders</li>
-        <li className="tag-pill bg-grape">Grad-CAM</li>
-        <li className="tag-pill bg-teal">Runs locally</li>
-        <li className="tag-pill bg-sun">Honest latency</li>
+        <li className="tag-pill bg-coral">25 Food Categories</li>
+        <li className="tag-pill bg-grape">Grad-CAM Attention</li>
+        <li className="tag-pill bg-teal">100% Local Inference</li>
+        <li className="tag-pill bg-sun">Honest Latency</li>
       </ul>
     </section>
   );

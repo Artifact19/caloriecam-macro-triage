@@ -6,6 +6,7 @@ import { ErrorState } from './components/ErrorState';
 import { Header } from './components/Header';
 import { SampleGallery } from './components/SampleGallery';
 import { Skeletons } from './components/Skeletons';
+import { SupportedDishes } from './components/SupportedDishes';
 import { UploadZone } from './components/UploadZone';
 import { useDarkMode } from './hooks/useDarkMode';
 import { useHealth } from './hooks/useHealth';
@@ -86,6 +87,7 @@ export default function App() {
               selectedId={selectedSample}
               onSelect={(f, id) => handleFile(f, id)}
             />
+            <SupportedDishes />
           </div>
 
           <section aria-label="Results" className="min-w-0">

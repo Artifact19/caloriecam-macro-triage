@@ -14,7 +14,7 @@ if not exist "frontend\node_modules" (
   popd
 )
 
-echo [start] Launching backend  on http://127.0.0.1:8000
+echo [start] Launching backend  on http://127.0.0.1:8001
 start "Meal Triage - Backend" cmd /k call run_backend.bat
 echo [start] Launching frontend on http://127.0.0.1:5173
 start "Meal Triage - Frontend" cmd /k call run_frontend.bat
