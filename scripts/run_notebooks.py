@@ -31,7 +31,7 @@ NOTEBOOK_NAMES = (
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--fast", action="store_true", help="set FAST_DEV=1 for a quick smoke training run")
-    ap.add_argument("--kernel", default="python3", help="Jupyter kernel name (default: python3)")
+    ap.add_argument("--kernel", default="meal-triage", help="Jupyter kernel name (default: meal-triage)")
     ap.add_argument("--only", nargs="*", help="Only execute specified notebook name(s)")
     ap.add_argument(
         "--out-dir",
