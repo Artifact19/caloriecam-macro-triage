@@ -179,7 +179,7 @@ async def predict(
                 classification_path_ms=round(class_ms, 2),
             ),
             engine=chosen_name,
-            model_version=rt.model_version or "mobilenetv3_large-food25",
+            model_version=rt.model_version or f"mobilenet_v3_large-food{len(rt.class_names)}",
             image=ImageInfo(original_width=orig_w, original_height=orig_h),
         )
 

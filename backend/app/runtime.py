@@ -146,7 +146,10 @@ def build_runtime(settings: Settings) -> Runtime:
         if f1 is None and rt.torch_engine is not None:
             f1 = rt.torch_engine.metadata.get("val_macro_f1")
         arch = rt.torch_engine.arch if rt.torch_engine else "mobilenet_v3_large"
-        rt.model_version = f"{arch.replace('_', '')}-food25-{float(f1):.4f}" if f1 is not None else f"{arch}-food25"
+        dataset = f"food{len(rt.class_names)}"
+        rt.model_version = (
+            f"{arch.replace('_', '')}-{dataset}-{float(f1):.4f}" if f1 is not None else f"{arch}-{dataset}"
+        )
     log.info(
         "runtime ready=%s default_engine=%s engines=%s missing=%s",
         rt.ready,

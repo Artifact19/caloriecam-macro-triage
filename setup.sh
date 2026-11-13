@@ -17,7 +17,7 @@ else
 fi
 pip install -r backend/requirements.txt
 pip install -r notebooks/requirements-notebooks.txt
-python -m ipykernel install --user --name python3 --display-name "Python 3 (meal-triage)" >/dev/null 2>&1 || true
+python -m ipykernel install --user --name meal-triage --display-name "Python 3 (meal-triage)" >/dev/null 2>&1 || true
 
 ( cd frontend && if [[ -f package-lock.json ]]; then npm ci; else npm install; fi )
 

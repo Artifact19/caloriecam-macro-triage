@@ -52,7 +52,7 @@ Browser (Vite + React + Tailwind Neo-Brutalist UI)
 ## Quick Start (Single-Script Launch)
 
 ### 1. Launch Everything With One Command
-Once installed, start **both** the FastAPI backend (`http://127.0.0.1:8000`) and the Vite React frontend (`http://127.0.0.1:5173`) using the single startup script:
+Once installed, start **both** the FastAPI backend (`http://127.0.0.1:8001`) and the Vite React frontend (`http://127.0.0.1:5173`) using the single startup script:
 
 * **Windows:**
   ```bat
@@ -83,7 +83,7 @@ python scripts/make_samples.py --require-correct
 python scripts/validate_artifacts.py
 
 # Step 6: Start servers
-run_backend.bat  # http://127.0.0.1:8000/docs
+run_backend.bat  # http://127.0.0.1:8001/docs
 run_frontend.bat # http://127.0.0.1:5173
 ```
 
@@ -184,7 +184,7 @@ caloricam-macro-triage/
 * **`GET /api/nutrition/{dish_name}`**
   Returns per-serving nutrition for a dish, scaled by the `servings` parameter.
 
-Interactive Swagger documentation is available at `http://127.0.0.1:8000/docs`.
+Interactive Swagger documentation is available at `http://127.0.0.1:8001/docs`.
 
 ---
 

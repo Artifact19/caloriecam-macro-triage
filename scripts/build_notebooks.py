@@ -111,7 +111,7 @@ We load the official Food-101 `train` and `test` splits filtered to our 25 targe
         ),
         new_code_cell(
             """CLASSES = class_names()
-assert len(CLASSES) == 25, f"Expected 25 classes, got {len(CLASSES)}"
+assert len(CLASSES) in (25, 101), f"Expected 25 or 101 classes, got {len(CLASSES)}"
 
 train_samples = get_subset_samples("train")
 test_samples = get_subset_samples("test")
@@ -1206,7 +1206,7 @@ pt_model = models.mobilenet_v3_large(weights=None)
 pt_model.classifier[3] = nn.Linear(pt_model.classifier[3].in_features, len(CLASSES))
 pt_model.load_state_dict(ckpt["state_dict"])
 pt_model.eval()
-print(f"Verified 25 classes and loaded checkpoint from {MODELS / 'mobilenetv3_food25.pt'}")"""
+print(f"Verified {len(CLASSES)} classes and loaded checkpoint from {MODELS / 'mobilenetv3_food25.pt'}")"""
         ),
         new_markdown_cell(
             """## 2. Export FP32 ONNX & Numerical Parity Check

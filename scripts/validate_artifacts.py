@@ -69,9 +69,11 @@ def _check_registry(
         if top_key not in data:
             errors.append(f"nutrition_registry.json missing top-level key '{top_key}'")
     items: dict[str, Any] = data.get("items", {})
-    if list(items.keys()) != subset_classes:
+    # Same rule the backend enforces at start-up (NutritionService.validate_against): the key
+    # *set* must match. Registry order is irrelevant because lookups are by name.
+    if set(items) != set(subset_classes):
         errors.append(
-            "nutrition_registry.json item keys do not match subset_classes.json order/set "
+            "nutrition_registry.json item keys do not match subset_classes.json "
             f"(missing={sorted(set(subset_classes) - set(items))}, extra={sorted(set(items) - set(subset_classes))})"
         )
     for dish, item in items.items():
@@ -165,8 +167,10 @@ def main(argv: list[str] | None = None) -> int:
         subset_classes: list[str] = []
     else:
         subset_classes = json.loads(subset_path.read_text(encoding="utf-8"))
-        if len(subset_classes) != 25:
-            errors.append(f"subset_classes.json has {len(subset_classes)} classes (expected 25)")
+        if not subset_classes:
+            errors.append("subset_classes.json is empty")
+        elif len(set(subset_classes)) != len(subset_classes):
+            errors.append("subset_classes.json contains duplicate class names")
 
     _check_registry(
         assets_dir / "nutrition_registry.json",
@@ -189,7 +193,10 @@ def main(argv: list[str] | None = None) -> int:
         print(f"validate_artifacts FAILED with {len(errors)} error(s).", file=sys.stderr)
         return 1
 
-    print("validate_artifacts: ALL CHECKS PASSED (25 classes, registry, checkpoint, 3 ONNX models, metrics, benchmark).")
+    print(
+        f"validate_artifacts: ALL CHECKS PASSED ({len(subset_classes)} classes, registry, checkpoint, "
+        "3 ONNX models, metrics, benchmark)."
+    )
     return 0
 
 

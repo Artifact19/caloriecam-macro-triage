@@ -12,7 +12,7 @@ from app.config import REPO_ROOT, Settings
 from app.main import create_app
 
 
-def test_all_25_classes_present_and_consistent(synth_client: TestClient) -> None:
+def test_all_classes_present_and_consistent(synth_client: TestClient) -> None:
     classes = json.loads((REPO_ROOT / "data" / "subset_classes.json").read_text(encoding="utf-8"))
     resp = synth_client.get("/api/nutrition")
     assert resp.status_code == 200

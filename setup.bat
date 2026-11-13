@@ -20,7 +20,7 @@ if "%USE_CUDA%"=="1" (
 )
 .venv\Scripts\pip.exe install -r backend\requirements.txt || goto :err
 .venv\Scripts\pip.exe install -r notebooks\requirements-notebooks.txt || goto :err
-.venv\Scripts\python.exe -m ipykernel install --user --name python3 --display-name "Python 3 (meal-triage)" >nul 2>&1
+.venv\Scripts\python.exe -m ipykernel install --user --name meal-triage --display-name "Python 3 (meal-triage)" >nul 2>&1
 
 pushd frontend
 if exist package-lock.json ( call npm ci || goto :err ) else ( call npm install || goto :err )
